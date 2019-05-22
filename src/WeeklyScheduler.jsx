@@ -15,7 +15,7 @@ class WeeklyScheduler extends React.Component {
     } else {
       for (let i = 0; i < 7; i += 1) {
         const day = [];
-        for (let j = 0; j < 96; j += 1) {
+        for (let j = 0; j < 48; j += 1) {
           day.push(defaultEvent);
         }
         days.push(day);
@@ -67,7 +67,7 @@ class WeeklyScheduler extends React.Component {
   setupTimeRows() {
     const { days } = this.state;
     const rows = [];
-    for (let i = 0; i < 96; i += 1) {
+    for (let i = 0; i < 48; i += 1) {
       const row = [];
       for (let j = 0; j < 7; j += 1) {
         row.push(days[j][i]);
@@ -110,7 +110,7 @@ class WeeklyScheduler extends React.Component {
           newDays[j][startingCell.time] = currentEvent;
         }
       }
-    } else if (timeDiff !== 0) {
+    } else {
       const timeStart = (startingCell.time < rowNum) ? startingCell.time : rowNum;
       const timeEnd = (startingCell.time < rowNum) ? rowNum : startingCell.time;
       for (let j = timeStart; j <= timeEnd; j += 1) {

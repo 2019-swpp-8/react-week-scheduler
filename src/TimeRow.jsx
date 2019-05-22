@@ -14,14 +14,14 @@ function stripeShade(rowNum, color) {
 }
 const TimeRow = ({ rowNumber, dayItems }) => {
   let rowHour;
-  const isRowHeader = rowNumber % 4 === 0;
+  const isRowHeader = rowNumber % 2 === 0;
   if (isRowHeader) {
-    rowHour = (rowNumber === 0) ? 0 : Math.floor(rowNumber / 4);
+    rowHour = (rowNumber === 0) ? 0 : Math.floor(rowNumber / 2);
   }
   return (
     <tr>
       {isRowHeader && (
-        <td className="hour" rowSpan="4">
+        <td className="hour" rowSpan="2">
           <span>{`${rowHour}:00`}</span>
         </td>
       )}

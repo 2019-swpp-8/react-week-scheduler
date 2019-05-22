@@ -45,7 +45,7 @@
 #WeeklySchedulerTable table tbody tr:nth-child(odd) {
   background: #c8cdd4;
 }*/
-#WeeklySchedulerTable table tbody tr:nth-child(4n+0) td {
+#WeeklySchedulerTable table tbody tr:nth-child(2n+0) td {
   border-bottom: 1px solid #626e7e;
 }
 #WeeklySchedulerTable table tbody tr td {
@@ -53,7 +53,7 @@
   vertical-align: middle;
   border-left: 1px solid #626e7e;
   position: relative;
-  height: 6px;
+  height: 24px;
   cursor: pointer;
 }
 #WeeklySchedulerTable table tbody tr td:last-child {
